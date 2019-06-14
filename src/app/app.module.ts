@@ -1,6 +1,7 @@
 import { Routing } from './routing';
 
 import { BrowserModule } from '@angular/platform-browser';
+import {FormsModule} from'@angular/forms';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
@@ -24,6 +25,7 @@ const Route= new Routing();
   imports: [
     BrowserModule,
     HttpClientModule,
+    FormsModule,
     RouterModule.forRoot(
      Route.appRoute )
   ],
