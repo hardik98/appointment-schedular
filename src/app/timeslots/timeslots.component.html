@@ -1,7 +1,9 @@
 <div>
    <div *ngIf="timeslots">
       <h2 *ngFor ="let time of timeslots">
-        <button class="{{time.val? 'c1':'c2'}}" [routerLink]="['/detail',time.time_slot_id]"> {{time.value}} </button>
+         <!-- <button class="{{time.val? 'c1':'c2'}}"  [routerLink]="['/detail',time.time_slot_id]"> {{time.value}} </button>  -->
+        <button class="{{time.val? 'c1':'c2'}}"  (click)="onclick(time.time_slot_id)"> {{time.value}} </button>  
+
       </h2>
      
    </div>

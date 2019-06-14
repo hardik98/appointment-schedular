@@ -9,6 +9,7 @@ import { TimeslotsComponent } from './timeslots/timeslots.component';
 import { HttpClientModule } from '@angular/common/http';
 import { UserdataComponent } from './userdata/userdata.component';
 import { WelcomeComponent } from './welcome/welcome.component';
+import { RigisteredUserComponent } from './rigistered-user/rigistered-user.component';
 //import { AvailableComponent } from './shared/available.ts/available.component';
 
 const Route= new Routing();
@@ -20,6 +21,7 @@ const Route= new Routing();
     TimeslotsComponent,
     UserdataComponent,
     WelcomeComponent,
+    RigisteredUserComponent,
     
     ],
   imports: [

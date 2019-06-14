@@ -1,5 +1,7 @@
-<form>
-    <div class="form-group">
+
+
+<form >
+    <div class="form-group"  >
       <label for="formGroupExampleInput">First Name</label>
       <input type="text" class="form-control" [(ngModel)]="firstname"[ngModelOptions]="{standalone: true}" id="formGroupExampleInput" placeholder="Enter Your First Name">
     </div>
@@ -11,12 +13,13 @@
       <label for="formGroupExampleInput2">Number</label>
       <input type="text" [(ngModel)]="number" [ngModelOptions]="{standalone: true}"  class="form-control" id="formGroupExampleInput2" placeholder="Enter Your Mobile number">
     </div>
-  </form>
+  
 
-  <div>
+  <div *ngIf="avail">
     <Button class="btn btn-primary" (click)="onClick()">Save</Button>
 
     
     <Button class="btn btn-primary" (click)="onCancle()">Cancel</Button>
 
   </div>
+</form>

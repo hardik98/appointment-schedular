@@ -1,3 +1,4 @@
+
 import { TimeService } from './../shared/time.service';
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
@@ -17,6 +18,7 @@ export class UserdataComponent implements OnInit {
   lastname;
   number;
   tid;
+  avail:Boolean=true;
 
 
   //availableSlot:Available;
@@ -37,8 +39,8 @@ export class UserdataComponent implements OnInit {
       alert("name is must required");
       // this.router.navigate([`/detail/${this.route.snapshot.paramMap.get('id')}`]);
     return ;
-    }  else
-    
+    }  
+    this.avail = false;
     ///this.availableSlot.slotAvailable=false;
      this.tid=this.route.snapshot.paramMap.get('id');
      this.data.timeSlots[this.tid].userData.push(
@@ -50,7 +52,7 @@ export class UserdataComponent implements OnInit {
 
 
         alert("Successfully submitted your data");
-    this.active = false;
+    
     this.router.navigate(['/home', { id: this.route.snapshot.paramMap.get('id') }]);
     console.log(this.route.snapshot.paramMap.get('id'));
     console.log("userData",this.data.timeSlots)
