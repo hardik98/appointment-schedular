@@ -56,7 +56,8 @@ export class TimeslotsComponent implements OnInit {
     this.route.navigate(['/detail',id])
     }
     else {
-      alert("this time slot is no longer avialble");
+    alert("this slot is no longer available but you can edit your details")
+     this.route.navigate(['/user',id]);
       return;
     }
   }
