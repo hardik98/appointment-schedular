@@ -1,47 +1,56 @@
 [
     {
-        "time_slot_id": 1, 
+        "time_slot_id": 0, 
         "value": "09:00",
-        "data": {}
+        "data": {},
+         "val":true
+    },
+    {
+        "time_slot_id": 1, 
+        "value": "10:00",
+        "data": {},
+        "val":true
     },
     {
         "time_slot_id": 2, 
-        "value": "10:00",
-        "data": {}
+        "value": "11:00",
+        "data": {},
+        "val":true
     },
     {
         "time_slot_id": 3, 
-        "value": "11:00",
-        "data": {}
+        "value": "12:00",
+        "data": {},
+         "val":true
     },
     {
         "time_slot_id": 4, 
-        "value": "12:00",
-        "data": {}
+        "value": "13:00",
+        "data": {},
+"val":true
     },
     {
         "time_slot_id": 5, 
-        "value": "13:00",
-        "data": {}
+        "value": "14:00",
+        "data": {},
+"val":true
     },
     {
         "time_slot_id": 6, 
-        "value": "14:00",
-        "data": {}
+        "value": "15:00",
+        "data": {},
+"val":true
     },
     {
         "time_slot_id": 7, 
-        "value": "15:00",
-        "data": {}
+        "value": "16:00",
+        "data": {},
+"val":true
     },
     {
         "time_slot_id": 8, 
-        "value": "16:00",
-        "data": {}
-    },
-    {
-        "time_slot_id": 9, 
         "value": "17:00",
-        "data": {}
+        "data": {},
+"val":true
     }
 ]
