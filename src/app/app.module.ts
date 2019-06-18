@@ -1,7 +1,7 @@
 import { routes } from './routing';
 
 import { BrowserModule } from '@angular/platform-browser';
-import {FormsModule} from'@angular/forms';
+import {FormsModule,ReactiveFormsModule} from'@angular/forms';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
@@ -27,7 +27,8 @@ import { RigisteredUserComponent } from './rigistered-user/rigistered-user.compo
     BrowserModule,
     HttpClientModule,
     FormsModule,
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes),
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

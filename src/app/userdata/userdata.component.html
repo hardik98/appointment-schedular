@@ -1,25 +1,111 @@
+<!-- <form [formGroup]="inputForm" (ngSubmit)="onSubmit()">
+
+  <label>
+    First Name:
+    <input type="text" formControlName="firstname" >
+    <p>value :{{inputForm.controls.firstname.value}}</p>
+  </label>
+  <hr />
+  <label>
+    Last Name:
+    <input type="text" formControlName="lastname">
+  </label>
+</form>
+
+ -->
 
 
-<form >
+
+
+ <form [formGroup]="inputForm">
+  <div >
+    <label for="formGroupExampleInput">First Name</label>
+    
+    <input type="text" class="form-control" formControlName="firstname" (blur)="cleanForm(inputForm)" id="formGroupExampleInput"
+      placeholder="Enter Your First Name">
+  </div>
+  
+
+  <div >
+    <label for="formGroupExampleInput">Last Name</label>
+    <input type="text" class="form-control" formControlName="lastname" id="formGroupExampleInput"
+      placeholder="Enter Your Last Name">
+  </div>
+
+  <div>
+    <label for="formGroupExampleInput2">Number</label>
+    <input type="text" formControlName="number" (blur)="cleanForm(inputForm)" class="form-control" id="formGroupExampleInput2"
+      placeholder="Enter Your Mobile number">
+  </div>
+    
+  <div *ngIf="avail">
+    <Button class="btn btn-primary" (click)="onClick()">Save</Button>
+    <Button class="btn btn-primary" (click)="onCancle()">Cancel</Button>
+  </div>
+</form> 
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 
+<form [formGroup]="inputForm">
     <div class="form-group"  >
       <label for="formGroupExampleInput">First Name</label>
-      <input type="text" class="form-control" (blur)="firstname = trimming_fn(firstname)" [(ngModel)]="firstname" [ngModelOptions]="{standalone: true}" id="formGroupExampleInput" placeholder="Enter Your First Name">
+      <input type ="text" formControlName="firstname" placeholder="Enter Your First Name" (blur)="firstname = trimming_fn(firstname.value)" >
     </div>
     <div class="form-group">
         <label for="formGroupExampleInput">Last Name</label>
-        <input type="text" class="form-control" [(ngModel)]="lastname" [ngModelOptions]="{standalone: true}" id="formGroupExampleInput" placeholder="Enter Your Last Name">
+        <input type ="text" formControlName="lastname" placeholder="Enter Your Last Name"  >
       </div>
     <div class="form-group">
       <label for="formGroupExampleInput2">Number</label>
-      <input type="text"  (blur)="number = trimming_fn(number)" [(ngModel)]="number" [ngModelOptions]="{standalone: true}"  class="form-control" id="formGroupExampleInput2" placeholder="Enter Your Mobile number">
+      <input type ="text" formControlName="number" placeholder="Enter Your Mobile Number" (blur)="number = trimming_fn(number)" >
     </div>
+    <div *ngIf="avail">
+        <Button class="btn btn-primary" (click)="onClick()">Save</Button>
+    
+        
+        <Button class="btn btn-primary" (click)="onCancle()">Cancel</Button>
+    
+      </div>
+    </form> -->
+
+<!-- </div> 
+  
+ <form  [formGroup]="inputForm">
+
+   <label>
+     FirstName
+    <input type ="text" formControlName="firstname" placeholder="Enter Your First Name" (blur)="firstname = trimming_fn(firstname)" >
+     </label> 
+</div>
+  
+   <label>
+     LastName
+    <input type ="text" formControlName="lastname" placeholder="Enter Your Last Name"  >
+     </label> 
   
 
-  <div *ngIf="avail">
+   <label>
+      Number
+     <input type ="text" formControlName="number" placeholder="Enter Your Mobile Number" (blur)="number = trimming_fn(number)" >
+      </label> 
+   
+  
+   -->
+<!-- <div *ngIf="avail">
     <Button class="btn btn-primary" (click)="onClick()">Save</Button>
 
     
     <Button class="btn btn-primary" (click)="onCancle()">Cancel</Button>
 
   </div>
-</form>
+</form> -->

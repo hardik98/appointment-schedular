@@ -2,8 +2,7 @@
 import { TimeService } from './../shared/time.service';
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
-
-
+import { FormControl,FormGroup } from '@angular/forms';
 
 
 @Component({
@@ -12,17 +11,24 @@ import { Router, ActivatedRoute } from '@angular/router';
   styleUrls: ['./userdata.component.css']
 })
 export class UserdataComponent implements OnInit {
+
+  inputForm = new FormGroup({
+       firstname:new FormControl(''),
+       lastname: new FormControl(''),
+       number:new FormControl('')
+  }); 
+
   active = true;
-  name;
-  firstname;
-  lastname;
-  number;
   tid;
   avail:Boolean=true;
 
-  trimming_fn(x) {    
-    return x ? x.replace(/\s/g,'') : '';    
+  // trimming_fn(x) {    
+  //   return x ? x.replace(/\s/g,'') : '';    
+  // }
+  cleanForm(formGroup: FormGroup) {
+    Object.keys(formGroup.controls).forEach((key) => formGroup.get(key).setValue(formGroup.get(key).value.trim()));
   }
+
 
   //availableSlot:Available;
   constructor(private router: Router,
@@ -38,13 +44,14 @@ export class UserdataComponent implements OnInit {
 
   onClick() {
 
-    if(!this.firstname){
+    if(!this.inputForm.value.firstname){
       alert("name is must required");
+      
       // this.router.navigate([`/detail/${this.route.snapshot.paramMap.get('id')}`]);
     return ;
     }  
-
-    if(!this.number){
+    
+    if(!this.inputForm.value.number){
       alert("number is must required");
       // this.router.navigate([`/detail/${this.route.snapshot.paramMap.get('id')}`]);
     return ;
@@ -54,9 +61,9 @@ export class UserdataComponent implements OnInit {
      this.tid=this.route.snapshot.paramMap.get('id');
      this.data.timeSlots[this.tid].userData.push(
        {
-         fname:this.firstname,
-         lname:this.lastname,
-         mnumber:this.number
+         fname:this.inputForm.value.firstname,
+         lname:this.inputForm.value.lastname,
+         mnumber:this.inputForm.value.number
         });
 
 
