@@ -7,5 +7,6 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Welcome';
-  subTitle="Appointment mangement";
+  subTitle="Appointments for";
+  date= new Date().toLocaleDateString();
 }

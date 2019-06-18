@@ -2,7 +2,9 @@
  import { TimeslotsComponent } from './timeslots/timeslots.component';
  import { WelcomeComponent } from './welcome/welcome.component';
   import { RigisteredUserComponent }  from './rigistered-user/rigistered-user.component';
-export class Routing {
+
+
+  export class Routing {
     appRoute= [
         {path:'detail/:id',component:UserdataComponent},
         {path:'', component:TimeslotsComponent },

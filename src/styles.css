@@ -1,32 +1,102 @@
 /* You can add global styles to this file, and also import other style files */
 @import "~bootstrap/dist/css/bootstrap.min.css";
+@import "~font-awesome/css/font-awesome.min.css";
 
-.btn{
- margin:10px;
+
+ /* .c1 {
+
+    text-align: center;
+    display:block;
+    background-color: white;
+    color: black;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 15px;
+    border: 1px solid black;
+   
 }
+
+div.col{
+     width:245px;
+    height:145px;
+    margin:20px; 
+}
+
+ div.c1 {
+    width:245px;
+    height:145px;
+    
+}
+div.c2{
+    width:245px;
+    height:145px;
+} 
+
+
+.c2.mainbtn{
+
+      color:white;
+      
+      border-radius: 4px;
+      background-color: red;
+      border:inherit;
+      
+    
+
+}
+
+
+
+
+.btn {
+    margin:10px;
+}
+
 
 .c2{
-    background-color:rgb(219, 42, 42);
-}
 
-.c1{
-    background-color: grey;
-    height: 100px;
-    width:200px;
     text-align: center;
-    background-color: aqua;
-    color:black;
-    padding:8px;
+    display:block;
+    background-color: red;
+    color:white;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 15px;
+    
+}*/
+
+
+
+.mainbtn {
+    width:100%;
+    background: transparent;
+    color:inherit;
+    border:1px solid blueviolet;
+    
+    
+}
+
+.mainbtn:hover {
+    background-color: crimson;
 
 }
 
+.c2>.mainbtn {
+    border:1px solid white;
+}
 
-div.timeslots {
-    box-sizing:border-box;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    margin: 0px;
-    margin-right:8px;
-    box-sizing: border-box;
+
+.card2{
+    border: 1px solid lightgrey;
+}
+.red2{
+    background: red;
+    color:white;
+}  
+.font {
+    display: inline;
+}
+
+.btn {
+    margin:10px;
 }

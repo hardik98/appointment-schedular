@@ -37,14 +37,14 @@ export class RigisteredUserComponent implements OnInit {
     }
     else {
       this.data.timeSlots[this.rid].userData[0].fname = this.firstname;
-      this.data.timeSlots[this.rid].userData[0].lname = this.firstname;
-      this.data.timeSlots[this.rid].userData[0].mnumber = this.firstname;
+      this.data.timeSlots[this.rid].userData[0].lname = this.lastname;
+      this.data.timeSlots[this.rid].userData[0].mnumber = this.number;
 
 
 
 
 
-      alert("Successfully submitted your data");
+      alert("Successfully updated your data");
 
       this.router.navigate(['/home', { id: this.route.snapshot.paramMap.get('id') }]);
       console.log(this.data.timeSlots);

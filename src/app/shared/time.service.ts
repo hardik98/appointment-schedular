@@ -65,14 +65,8 @@ export class TimeService  {
         "data": [],
         "val": true,
         "userData": []
-    },
-    {
-        "time_slot_id": 8,
-        "value": "5pm-6pm",
-        "data": [],
-        "val": true,
-        "userData": []
     }
+
 ]
 
   constructor(public http: HttpClient) {
