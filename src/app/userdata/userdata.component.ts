@@ -20,6 +20,9 @@ export class UserdataComponent implements OnInit {
   tid;
   avail:Boolean=true;
 
+  trimming_fn(x) {    
+    return x ? x.replace(/\s/g,'') : '';    
+  }
 
   //availableSlot:Available;
   constructor(private router: Router,
@@ -37,6 +40,12 @@ export class UserdataComponent implements OnInit {
 
     if(!this.firstname){
       alert("name is must required");
+      // this.router.navigate([`/detail/${this.route.snapshot.paramMap.get('id')}`]);
+    return ;
+    }  
+
+    if(!this.number){
+      alert("number is must required");
       // this.router.navigate([`/detail/${this.route.snapshot.paramMap.get('id')}`]);
     return ;
     }  

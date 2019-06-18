@@ -16,6 +16,11 @@ export class RigisteredUserComponent implements OnInit {
   lastname;
   number;
 
+
+  trimming_fn(x) {    
+    return x ? x.replace(/\s/g,'') : '';    
+  }
+
   constructor(public data: TimeService, public route: ActivatedRoute, public router: Router) {
 
     this.rid = this.route.snapshot.paramMap.get('id');
@@ -32,6 +37,12 @@ export class RigisteredUserComponent implements OnInit {
   onClick() {
     if (!this.firstname) {
       alert("name is must required");
+      // this.router.navigate([`/detail/${this.route.snapshot.paramMap.get('id')}`]);
+      return;
+    }
+
+    if (!this.number) {
+      alert("number is must required");
       // this.router.navigate([`/detail/${this.route.snapshot.paramMap.get('id')}`]);
       return;
     }
