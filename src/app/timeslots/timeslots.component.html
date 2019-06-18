@@ -1,47 +1,29 @@
-
 <!--    
 <div class="timeslots">
    <div class="timec" *ngIf="timeslots" >
       <h3 *ngFor ="let time of timeslots">
          <button class="{{time.val? 'c1':'c2'}}"  [routerLink]="['/detail',time.time_slot_id]"> {{time.value}} </button>  -->
-        <!-- <button class="{{time.val? 'c1':'c2'}}"  (click)="onclick(time.time_slot_id)"> {{time.value}} </button>  
+<!-- <button class="{{time.val? 'c1':'c2'}}"  (click)="onclick(time.time_slot_id)"> {{time.value}} </button>  
   -->
-      <!-- </h3>
+<!-- </h3>
      
    </div>
   
-</div> --> 
-
+</div> -->
 <div class="container-fluid">
-   
-      
-         
-            <div class="row">
+   <div class="row">
 
+      <div class="col col-md-3 p-1 " *ngFor="let time of timeslots">
+         <div class="card2 p-3 {{time.val? 'c1':'red2'}}">
 
-                  <div class="col col-md-3 p-1 " *ngFor="let time of timeslots" >
-               <div class="card2 p-3 {{time.val? 'c1':'red2'}}">
-
-               
-           
-            <div class="" >
-             <p class="text-center"> {{time.value}} </p>
-              <hr />
-            
-                <div class="font"> 
-                    
-                  
-                     <button  class="btn mainbtn" (click)="onclick(time.time_slot_id)"> <i class=" {{time.val ? 'fas fa-plus' : 'fa fa-eye'}} "> </i>        {{time.val ? 'Add' : 'View'}}</button> 
-       
-                 
-
-                </div>
-             
+            <p class="text-center"> {{time.value}} </p>
+            <hr />
+            <button class="btn mainbtn" (click)="onclick(time.time_slot_id)"> <i
+                  class=" {{time.val ? 'fas fa-plus' : 'fa fa-eye'}} "> </i> {{time.val ? 'Add' : 'View'}}</button>
 
          </div>
       </div>
+
    </div>
-     
-   </div>
-        
+
 </div>
