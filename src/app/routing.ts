@@ -1,11 +1,12 @@
- import { UserdataComponent } from './userdata/userdata.component';
- import { TimeslotsComponent } from './timeslots/timeslots.component';
- import { WelcomeComponent } from './welcome/welcome.component';
-  import { RigisteredUserComponent }  from './rigistered-user/rigistered-user.component';
+import { Routes } from '@angular/router';
+import { TimeslotsComponent } from './timeslots/timeslots.component';
+import { RigisteredUserComponent } from './rigistered-user/rigistered-user.component';
+import { UserdataComponent } from './userdata/userdata.component';
+import { WelcomeComponent } from './welcome/welcome.component';
 
 
-  export class Routing {
-    appRoute= [
+ export const routes:Routes =
+ [
         {path:'detail/:id',component:UserdataComponent},
         {path:'', component:TimeslotsComponent },
         {path:'home', component:TimeslotsComponent },
@@ -13,4 +14,4 @@
         {path:'user/:id',component:RigisteredUserComponent}
   
       ]
-}
+
