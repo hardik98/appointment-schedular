@@ -12,7 +12,6 @@ import { WelcomeComponent } from './welcome/welcome.component';
 import { RigisteredUserComponent } from './rigistered-user/rigistered-user.component';
 //import { AvailableComponent } from './shared/available.ts/available.component';
 
-const Route= new Routing();
 
 
 @NgModule({
